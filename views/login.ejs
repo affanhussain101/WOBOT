@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <script src="https://kit.fontawesome.com/e20604f321.js" crossorigin="anonymous"></script>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<script>
+     const setUsername = (val) => {
+         localStorage.setItem('username', val)
+     }
+     const setPassword = (value) => {
+        localStorage.setItem('password', value)
+     }
+    async function login(){
+        // let username= localStorage.getItem('username')
+        // let password= localStorage.getItem('password')
+
+        // print(username,password)
+        // console.log("HERE REACHED",username,password)
+        let obj = {
+            username:localStorage.getItem('username'),
+            password:localStorage.getItem('password')
+        }
+
+        console.log(obj);
+
+        await fetch('http://localhost:3000/login_server',{
+            method : 'post',
+            headers: {
+                'Content-Type' :'application/json'
+            },
+            body: JSON.stringify(obj)
+        }).then(response=>response.json()).then(ress=>{
+            localStorage.setItem('token',ress.token)
+            window.location.href = "Signup";
+        });
+        //  localStorage.setItem('token',token.token)
+
+    }
+</script>
+
+<body>
+    <div class="container">
+         <!-- <form class="form" >  -->
+        <h1>LOG IN</h1>
+        <div class= "form">
+        <div class="box">
+            <i class="fa fa-envelope"></i>
+            <input type="email" name="username" id="email" placeholder="Enter Your Mail" onchange="setUsername(this.value)">
+
+        </div>
+        <div class="box">
+            <i class="fa fa-unlock-alt"></i>
+            <input type="password" name="password" id="password" placeholder="Enter your Password" onchange="setPassword(this.value)">
+       
+        </div>
+            <button class="btn" type="submit">Login</button>
+            <a class="btn" onclick="location.href='/signup'">Sign Up</a>
+
+            <!-- <script>window.alert("logout sucessful")</script> -->
+        <!-- <a class="btn" onclick="location.href='/Signup'">Sign Up</a> -->
+        <!-- </form>  -->
+    </div>
+    </div>
+
+</body>
+
+</html>

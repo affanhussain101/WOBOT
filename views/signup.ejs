@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>SIGNUP</title>
+    <link rel="stylesheet" type="text/css" href="Signup.css">
+
+</head>
+<body>
+    <div class="main">
+    <div class="container">
+    <form action="/Signup" class="form" method="post">
+        <h1>SIGN UP</h1>
+        <script>
+
+            const valname = (text,err) => {
+            let cn1= /^[a-zA-Z0-9]*$/;
+
+            if (!text.match(cn1)) {
+            return "Add alphanumeric value without Space";
+         }
+        }
+        function stext(val){
+            console.log(val)
+            let v = valname(val,Error);
+            if(v != null){
+                alert(v);
+                document.getElementById('name').value='';
+            }
+
+        }
+        const valnum = (text,err) => {
+            let cn2=/^\d{10}$/;
+                console.log(text.match(cn2));
+            if (!text.match(cn2)) {
+            return"Enter A valid no";
+            }
+        }
+            function snum(val){
+            console.log(val)
+            let v = valnum(val,Error);
+            if(v != null){
+                alert(v);
+                document.getElementById('number').value='';
+
+        }
+    }
+
+         const valemail = (text,err) =>
+        {
+            let cn3=/(^[^\s@]+@[^\s@]+\.[^\s@]+$)/;
+
+            if (!text.match(cn3)) {
+        
+                return "Enter a Valid Email";
+            }
+        }
+            function semail(val){
+            console.log(val)
+            let v = valemail(val,Error);
+            if(v != null){
+                alert(v);
+                document.getElementById('email').value='';
+
+         }
+        }
+        function timeout(){
+            window.location.href = "Login";
+        }
+        const time = setTimeout(function(){timeout()},300000);
+        </script>
+        <div class="box">
+        <input type="text" id="name" name="name" placeholder="Username" onchange="stext(this.value)">
+        </div>
+        <div class="box">
+        <input type="number" id="number" name="number" placeholder="Phone Number" onchange="snum(this.value)">
+        </div>
+        <div class="box">
+            <input type="email" id="email" name="email" placeholder="Email" onchange="semail(this.value)">
+            </div>
+        <div class="box">
+        <input type="text"id="address" name="pass" placeholder="Password" >
+        </div>
+        <button type="submit" class="btn">Finish</button>
+    </form>
+</div>
+
+    </div>
+    
+</body>
+</html>

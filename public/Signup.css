@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-size: cover;
+    background-attachment: fixed;
+  
+}
+
+.container{
+   
+    color: white;
+    width:40%;
+    height:70vh;
+    float:center;
+    margin-left: 8%;
+    /* flex-direction: column;
+    flex: 0 0 50px; */
+
+}
+
+.container h1{
+    display: inline-block;
+    font-size: 35px;
+    margin-bottom: 20px;
+    padding: 13px 0;
+
+}
+
+.box{
+    width: 100%;
+    margin: 22px 0px;
+    border-bottom: 2px solid white;
+    text-align: left;
+   
+
+}
+
+.box input{
+    background: none;
+    width: 75%;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: white;
+
+}
+
+.box i{
+  
+    width: 25px;
+    text-align: center;
+}
+
+.form{
+    position: relative;
+    width: 140%;
+    padding: 20px 20px ;
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+    text-align: center;
+
+    
+}
+
+.btn{
+    color: white;
+    cursor: pointer;
+    outline: none;
+    width: 25%;
+    margin: 12px 0;
+    padding: 10px 2px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 18px;
+    background: none;
+    font-weight: bold;
+}
+.main{
+    display: inline-block;
+    width:50% ;
+    height: 70vh;
+    margin-left:35%;
+    margin-top:50px;
+    position:absolute;
+    flex-direction: column;
+    float: left;
+    align-items: stretch;
+    flex:1 1 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.btn:hover{
+    color: black;
+    background: white;
+}
+
+/* .table-data{
+   
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    margin-right: 30px;
+    padding: auto;
+    position: absolute;
+    width:400%;
+    height:30vh;
+    background-size: cover;
+    background-attachment: fixed;
+
+}  */
+
+th{
+    font:Georgia;
+    border-radius: 6px;
+    font-size: 150%;
+    float: inherit;
+    text-align: left;
+    color: white;
+    border: 3px solid white;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.7);
+  }
+  td{
+    font-size: 120%;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    border-radius: 4px;
+    opacity: 0.7;
+    margin: 3%;
+    padding: 4px;
+  }
+  td:hover{
+    opacity: 1;
+  }

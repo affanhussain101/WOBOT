@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Associates</title>
+  <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <div class="table-data">
+<h2 class="tab">List Of Associates</h2>
+    <table>
+         <tr>
+             <!-- <th>S.No</th>  -->
+            <th>Full Name</th>
+            <th>CONTACT_NO</th>
+            <th>Email_id</th>
+        </tr>
+        
+        <%
+        if(main.length!=0){
+        var i=1;
+        main.forEach(function(data){
+        %>
+        <tr>
+            <!-- <td><%=i; %></td> -->
+            <td><%=data.name %></td>
+            <td><%=data.number %></td>
+            <td><%=data.email %></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+    <form action="/upload" class="form" method="post"></form>
+    <div><label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile" accept=".csv"></div>
+    
+</body>
+</html>

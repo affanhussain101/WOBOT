@@ -1,0 +1,78 @@
+table{
+    border:3px;
+    border-bottom: 2px solid black;
+    margin:auto;
+    margin-bottom: 5px;
+    width:95%;
+    color: black;
+    height: auto;
+    font-size: 1.1vmax;
+    box-shadow: 10px 10px;
+    border-radius: 5px;;
+ }
+ th{
+   height: 10px;
+   color:white;
+   padding: 10px;
+   text-align: center;
+   background-color: black;
+ }
+ td{
+   text-align:center;
+   padding:7px;1
+   height: 50px;
+   width:3%;
+ }
+ h2.tab{
+   text-align: center;
+   font-size: 3vmax;
+   color:Grey;
+   font-style:bold;
+   margin-top: 10px;
+   margin-bottom: 3px;
+ }
+ /* tr:hover{
+ background-color: blu;
+ } */
+ tr:nth-child(even){background-color: #f2f2f2}
+ tr:nth-child(odd){background-color: #c1c1c1}
+
+ .tabButton
+{
+   background-color: tomato;
+   border: none;
+   color: white;
+   padding:10px;
+   text-decoration: none;
+   cursor: pointer;
+   border-radius: 1px;
+   font-size: 1.8vh;
+   border-radius: 20px;
+   width:65%;
+   padding: auto;
+}
+.tabButton:hover
+{
+  background-color: red;
+}
+
+.tabButtonG
+{
+   background-color: tomato;
+   border: none;
+   color: white;
+   padding:10px;
+   text-decoration: none;
+   cursor: pointer;
+   border-radius: 1px;
+   font-size: 1.8vh;
+   border-radius: 20px;
+   width:25%;
+   margin-left:5%;
+   padding: auto;
+}
+.tabButtonG:hover
+{
+  background-color: red;
+}
+ 
